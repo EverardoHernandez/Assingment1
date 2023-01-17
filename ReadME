@@ -14,3 +14,23 @@ or exit.
 There are plenty of test that could be done such as when the program starts, there should be zero marbles in 
 the bags. After picking a color, we can test if the code is properly adding the marbles to the proper bag.
 We can also test if the marbles are being subtracted properly. 
+
+Here are the lines of my code that show I tried to meet all the requirements.
+
+line 4-8 "assingment1test.cpp" -- testing
+void runTests() {
+    // Test Case 1
+    int red = 5;
+    int add = 7 + red;
+    assert(add == 12);
+    
+Line 11-13 "assingment1.cpp" - representing marbles
+    int red;
+    int blue;
+    int green;
+    
+Line 50 "assingment1.cpp" - adding marbles
+  red = red + number;
+ 
+Line 60 "assingment1.cpp" - subtracting marbles (removing)
+  red = red - number;
