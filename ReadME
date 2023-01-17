@@ -1,1 +1,16 @@
-test
+1.) Assignment 1, CS 260 " BAG OF MARBLES "
+
+2.) A program that can model a bag of marbles would be creating classes that represents a marble.
+Each class will have a color variable (int red, int blue, int green). Color can be used to represent
+marbles. By setting color as int, it will allow us to add and subtract marbles from the color the user picks. 
+
+The way we can connect all the classes together can be by using if statements. We will need to use strings
+to allow the user to pick whatever color they want to add marbles or subtract marbles from. 
+
+Since we want to keep asking the user if they want to add or subtract marbles, using a do loop can be extremely 
+helpful. After the user has added or subtracted marbles, we can leave them the option of keep using the program
+or exit. 
+
+There are plenty of test that could be done such as when the program starts, there should be zero marbles in 
+the bags. After picking a color, we can test if the code is properly adding the marbles to the proper bag.
+We can also test if the marbles are being subtracted properly. 
