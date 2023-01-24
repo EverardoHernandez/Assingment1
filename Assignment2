@@ -1,0 +1,70 @@
+2.)
+
+DESIGN:
+	
+I want to create a car wash where people who are in the front get their car washed and the people behind have to wait. Different integers will be queued to represent a different vehicle. Whenever the queue is full, I need to remove the first integer and insert a new integer. I can do car brands instead of numbers. 
+
+Int main(){
+	queue<string> cars;
+	
+	cars.push(“Honda”);
+cars.push(“Audi”);
+cars.push(“BMW”);
+cars.push(“Porsche”);
+
+Cout << “First car to get car wash is the blue “ << q.front() << endl;
+
+q.pop();
+
+Cout << “Next car in line is the gray “ << q.front() l << endl;
+
+q.pop();
+
+Cout << “Next car in line is the white “ << q.front() << endl;
+
+q.pop();
+
+Cout << “Next car in line is the red “ << q.front() << endl;
+
+If (q.empty()){
+	Cout << “There are no cars in line” << endl;
+}
+Else {
+	Cout << “There are still cars waiting to be washed” << endl;
+}
+
+Return 0;
+}
+
+
+a.) We will need a function that can add to the back(enqueue), pull from the front(dequeue), size, and isEmpty.
+
+b.) We will need to know what the data is about, what is the front/end, and the size of the queue. 
+
+3.) 
+
+DESIGN:
+Creating simple list where I am able to remove or insert any integers at any desired location. I should display the size of the list in order to know what integer I want to remove or where I want to add a new interger. 
+
+Int main(){
+	list <int> values = {2,4,6,8,10};
+	
+	Cout < “The size of the list is: “ << int size_of_list = value.size());
+	
+
+	list<int> pos = values.begin();
+
+	values. insert(pos, 2, 7);
+	
+	Cout << “New list is: “ << values << endl;
+	
+	Values . remove(10);
+
+Cout << “New list is: “ << values << endl;
+
+}
+	
+
+a.) We will need an insert function, a delete function, and an append.
+
+b.)We would need to know the size of the list, pointers, and the integers that are in the list.
