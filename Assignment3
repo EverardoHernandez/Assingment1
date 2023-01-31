@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+
+class node{
+    public:
+        int value;
+        node* Next;
+};
+
+// prints all the nodes and stops when next node is empty
+void printlist(node* n){
+    while (n!= NULL){
+        cout << n->value << endl;
+        n = n->Next;
+    }
+}
+
+//Adds new node at the end of the linked list
+void enqueue(node**head, int newValue){
+    // Makes new node
+    node* newnode = new node();
+    newnode->value = newValue;
+    // Tells program that the next node is empty
+    newnode->Next = NULL;
+    if (*head == NULL){
+        *head = newnode;
+        return;
+    }
+    node* last = *head;
+    while(last->Next!=NULL){
+        last = last->Next;
+    }
+    last->Next = newnode;
+}
+
+// Removes the first node and prints "Returned Values: "
+void dequeue(node**head){
+    node* temp = *head;
+    int value = temp->value;
+    *head = (*head)->Next;
+    delete temp;
+    cout << "Returned Value: " << value << endl;
+}
+
+// Returns the value of the front node
+int peek(node*head){
+    if (head == NULL){
+        cout << "Empty" << endl;
+        return -1;
+    }
+    return head->value;
+    
+}
+
+int main(){
+    // Creates new nodes and tells thier position
+    node* head= new node();
+    node* second= new node();
+    node* third= new node();
+
+    // Sets values 
+    head->value  = 1;
+    head->Next = second;
+
+    second->value = 2;
+    second->Next = third;
+
+    //Since there are only three values, the node after is a NULL
+    third->value = 3;
+    third->Next = NULL;
+
+    enqueue(&head,4);
+    dequeue(&head);
+    cout << "Peeked Value: " << peek(head) << endl;
+    // Prints all the nodes in the set order
+    printlist(head);
+    cout << endl;
+
+     //Testing if program works
+    cout << "TESTING:" << endl << endl;
+
+    enqueue(&head,4);
+    dequeue(&head);
+    cout << "Peeked Value: " << peek(head) << endl << endl;
+
+    dequeue(&head);
+    cout << "Peeked Value: " << peek(head) << endl << endl;
+
+    enqueue(&head,5);
+    printlist(head);
+}
